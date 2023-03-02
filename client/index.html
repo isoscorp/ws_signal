@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signal</title>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <h2>Enter signal properties</h2>
+        <label for="amplitude">Amplitude (A):</label>
+        <input type="number" id="amplitude" step="any">
+        <br>
+        <label for="frequency">Frequency (F):</label>
+        <input type="number" id="frequency" step="any">
+        <br>
+        <button onclick="getSignal()">Get signal!</button>
+        <script>
+            function getSignal() {
+                const amplitude = document.getElementById("amplitude").value;
+                const frequency = document.getElementById("frequency").value;
+                sendMessage({"a": amplitude, "f": frequency});
+            }
+        </script>
+
+        <h2>Result</h2>
+        <table style="border-spacing: 15px;">
+            <tr>
+                <th>t</th>
+                <th>A * sin(F * t/100)</th>
+            </tr>
+            <tr>
+                <td id="time-0"></td>
+                <td id="value-0"></td>
+            </tr>
+            <tr>
+                <td id="time-1"></td>
+                <td id="value-1"></td>
+            </tr>
+            <tr>
+                <td id="time-2"></td>
+                <td id="value-2"></td>
+            </tr>
+            <tr>
+                <td id="time-3"></td>
+                <td id="value-3"></td>
+            </tr>
+            <tr>
+                <td id="time-4"></td>
+                <td id="value-4"></td>
+            </tr>
+            <tr>
+                <td id="time-5"></td>
+                <td id="value-5"></td>
+            </tr>
+            <tr>
+                <td id="time-6"></td>
+                <td id="value-6"></td>
+            </tr>
+            <tr>
+                <td id="time-7"></td>
+                <td id="value-7"></td>
+            </tr>
+            <tr>
+                <td id="time-8"></td>
+                <td id="value-8"></td>
+            </tr>
+            <tr>
+                <td id="time-9"></td>
+                <td id="value-9"></td>
+            </tr>
+        </table>
+    </body>
+</html>
